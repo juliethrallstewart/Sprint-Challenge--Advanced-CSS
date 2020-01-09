@@ -1,1 +1,61 @@
 // Navigation code here
+
+.nav-container {
+    .custom-layout-column(@direction, @align, @justify);
+    width: @width;
+    margin-top: 0px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    opacity: 0.5%;
+    background-color: @white;
+
+
+
+
+    h1 {
+        font-size: 4rem;
+        margin-top: 15px;
+
+        @media @phone {
+            font-size: @mobile-logo;
+        }
+    }
+
+    nav a {
+        .links-nav();
+        width: 100px;
+        padding: 0 20px;
+        text-align: center;
+
+        &:hover {
+            background-color: teal;
+            color: white;
+        }
+
+        @media @phone {
+
+            .links-phone();
+            padding: 8px;
+            ;
+
+
+
+        }
+    }
+
+
+
+}
+
+
+
+.nav1 {
+    .custom-layout-row(row, @align, @justify, no-wrap);
+    height: 50px;
+    width: @width;
+    margin-top: 10px;
+
+
+}
